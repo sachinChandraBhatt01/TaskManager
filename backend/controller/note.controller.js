@@ -9,7 +9,7 @@ export const addNote = async (req, res, next) => {
   if (!title) {
     return next(errorHandler(400, "Title is required"))
   }
-
+ 
   if (!content) {
     return next(errorHandler(400, "Content is required"))
   }

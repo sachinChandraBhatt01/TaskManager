@@ -32,9 +32,10 @@ const Navbar = ({ userInfo, onSearchNote, handleClearSearch }) => {
     try {
       dispatch(signoutStart())
 
-      const res = await axios.get("http://localhost:3000/api/auth/signout", {
+      const res = await axios.get("https://taskmanager-1qrf.onrender.com/api/auth/signout", {
         withCredentials: true,
       })
+      
 
       if (res.data.success === false) {
         dispatch(signoutFailure(res.data.message))
